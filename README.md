@@ -82,6 +82,6 @@ from the root directory.
 
 ## Author
 
-Favour Onuoha
+Favour Onuoha <dovo.fav@aol.com>
 
-Vivian Okall
+Vivian Okall <vivieokall@gmail.com>
