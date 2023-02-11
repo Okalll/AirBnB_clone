@@ -1,22 +1,16 @@
 #!/usr/bin/python3
-"""This is the Review module for the AirBnB project"""
-from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, ForeignKey
+"""Defines the Review class."""
+from models.base_model import BaseModel
 
 
-class Review(BaseModel, Base):
-    """ Review Class to store review information
+class Review(BaseModel):
+    """Represent a review.
     Attributes:
-        place_id: place id
-        user_id: user id
-        text: review description
+        place_id (str): The Place id.
+        user_id (str): The User id.
+        text (str): The text of the review.
     """
-    __tablename__ = "reviews"
-    text = Column(String(1024),
-                  nullable=False)
-    place_id = Column(String(60),
-                      ForeignKey("places.id", ondelete="CASCADE"),
-                      nullable=False)
-    user_id = Column(String(60),
-                     ForeignKey("users.id", ondelete="CASCADE"),
-                     nullable=False)
+
+    place_id = ""
+    user_id = ""
+    text = ""

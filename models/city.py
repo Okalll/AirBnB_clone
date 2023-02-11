@@ -1,21 +1,14 @@
 #!/usr/bin/python3
-"""This is the  City Module for AirBnB project"""
-from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, ForeignKey
-from sqlalchemy.orm import relationship, backref
+"""Defines the City class."""
+from models.base_model import BaseModel
 
 
-class City(BaseModel, Base):
-    """The city class, contains state ID and name
+class City(BaseModel):
+    """Represent a city.
     Attributes:
-        state_id: The state id
-        name: input name
+        state_id (str): The state id.
+        name (str): The name of the city.
     """
-     __tablename__ = "cities"
-    name = Column(String(128), nullable=False)
-    state_id = Column(String(60),
-                      ForeignKey("states.id", ondelete="CASCADE"),
-                      nullable=False)
-    places = relationship("Place", backref="cities",
-                          cascade="all, delete-orphan",
-                          passive_deletes=True)
+
+    state_id = ""
+    name = ""
